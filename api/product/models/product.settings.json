@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "Mark": {
+      "type": "string"
+    },
+    "reviews": {
+      "collection": "review",
+      "via": "product"
+    },
+    "category": {
+      "model": "category"
+    }
+  }
+}

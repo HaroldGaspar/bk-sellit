@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sellers",
+  "info": {
+    "name": "Seller"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "admin_user": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "nickname": {
+      "type": "string"
+    }
+  }
+}
