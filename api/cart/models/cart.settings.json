@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carts",
+  "info": {
+    "name": "Cart"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total_price": {
+      "type": "decimal"
+    },
+    "pay_method": {
+      "type": "enumeration",
+      "enum": [
+        "credit_card",
+        "yape"
+      ]
+    },
+    "customer": {
+      "model": "customer",
+      "via": "carts"
+    },
+    "product_details": {
+      "collection": "product-detail",
+      "via": "cart"
+    }
+  }
+}

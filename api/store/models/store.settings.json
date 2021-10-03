@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "name": "store",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "products": {
+      "via": "store",
+      "collection": "product"
+    },
+    "categories": {
+      "collection": "category"
+    },
+    "customer": {
+      "model": "customer"
+    }
+  }
+}

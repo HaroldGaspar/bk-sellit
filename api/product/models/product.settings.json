@@ -27,15 +27,26 @@
     "photo": {
       "type": "string"
     },
-    "Mark": {
+    "mark": {
       "type": "string"
     },
     "reviews": {
-      "collection": "review",
-      "via": "product"
+      "via": "product",
+      "collection": "review"
     },
     "category": {
       "model": "category"
+    },
+    "store": {
+      "via": "products",
+      "model": "store"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "product_details": {
+      "via": "product",
+      "collection": "product-detail"
     }
   }
 }

@@ -1,0 +1,141 @@
+###
+GET http://localhost:8000/products
+
+###
+GET http://localhost:8000/categories/
+
+###
+GET http://localhost:8000/reviews
+
+###
+GET http://localhost:8000/sellers
+
+###
+GET http://localhost:8000/customers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+
+###
+POST http://localhost:8000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMjIzNDc4LCJleHAiOjE2MzU4MTU0Nzh9.vzsptH2uwzqe4iA4oq-HC5pbZyKu-Dhs7X8jmWpPc_4
+Content-Type: application/json
+
+{
+    "name": "polo nuevo",
+    "price" : 34.99
+}
+
+###
+PUT http://localhost:8000/products/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+Content-Type: application/json
+
+{
+    "name": "first polo"
+}
+
+###
+PUT  http://localhost:8000/reviews/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+Content-Type: application/json
+
+{
+    "product" : 1,
+    "stars": 0,
+    "Coment": "Mi coment",
+    "image":{
+        "id":1
+    }
+}
+
+
+
+###
+delete http://localhost:8000/products/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMyODYyODMzLCJleHAiOjE2MzU0NTQ4MzN9.DbHD1InHOamrhvmJc7DSIXBVJOaldQvqI5yZqoLi_HA
+Content-Type: application/json
+
+{
+    "name": "tesSS",
+    "price" : 34.99,
+    "stock": 2
+}
+
+###
+POST http://localhost:8000/auth/local
+Content-Type: application/json
+
+{
+    "identifier": "you2@mail.com",
+    "password" : "123456"
+}
+
+###
+GET http://localhost:8000/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMjIyNzk3LCJleHAiOjE2MzU4MTQ3OTd9.8LTD1dedFbJ-LU6R0aumjN6jmR28cutQHaWrSfPBpnU
+
+Content-Type: application/json
+
+{
+    "identifier": "you2@mail.com",
+    "password" : "123456"
+}
+
+###
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "username":"tesu",
+    "email": "you6@mail.com",
+    "password" : "123456"
+}
+
+###
+POST http://localhost:8000/customers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+Content-Type: application/json
+
+{
+        "is_seller": "mi tienda",
+        "user": 1
+
+}
+
+###
+GET  http://localhost:8000/customers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMjMxMzEyLCJleHAiOjE2MzU4MjMzMTJ9.vmfmVcFe6IYJjZ4CfAwrazZ2va3ZFvnmKalzhYLg4fw
+
+###
+GET http://localhost:8000/stores?customer=9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+
+###
+GET http://localhost:8000/customers?user=14
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+
+###
+PUT http://localhost:8000/carts/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+Content-Type: application/json
+
+{
+        "is_actual": true,
+        "customer": 1
+
+}
+
+###
+POST http://localhost:8000/product-details
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
+Content-Type: application/json
+
+{
+        "product": 1,
+        "qty": 4,
+        "cart":1
+
+}
+
+###
+GET http://localhost:8000/carts/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMDEyNjMyLCJleHAiOjE2MzU2MDQ2MzJ9.bKikEe0JDW0xYuCP65Fag863ORgA4-NUZZRfsnj8rKY
