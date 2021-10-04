@@ -58,6 +58,10 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "reviews": {
+      "via": "users_permissions_user",
+      "collection": "review"
     }
   }
 }

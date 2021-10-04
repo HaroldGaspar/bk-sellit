@@ -36,6 +36,11 @@
     "product": {
       "via": "reviews",
       "model": "product"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reviews"
     }
   }
 }

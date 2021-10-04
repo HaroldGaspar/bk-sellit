@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "knex": "0.21.18",
     "mysql": "^2.18.1",
     "pg": "^8.7.1",
