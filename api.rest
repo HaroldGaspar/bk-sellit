@@ -65,7 +65,7 @@ POST http://localhost:8000/auth/local
 Content-Type: application/json
 
 {
-    "identifier": "you2@mail.com",
+    "identifier": "haroldgasparcayo@yahoo.es",
     "password" : "123456"
 }
 
@@ -81,13 +81,23 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8000/users
+POST http://hakhi.xyz:8000/users
 Content-Type: application/json
 
 {
-    "username":"tesu",
-    "email": "you6@mail.com",
-    "password" : "123456"
+    "username":"tesuxxx",
+    "email": "haroldgasparcayo@yahoo.es",
+    "password" : "123456",
+    "confirmed" : false,
+    "blocked" : false    
+}
+
+###
+POST http://localhost:8000/auth/send-email-confirmation
+Content-Type: application/json
+
+{
+    "email": "haroldgasparcayo@yahoo.es"
 }
 
 ###
