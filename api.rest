@@ -85,15 +85,15 @@ POST http://hakhi.xyz:8000/users
 Content-Type: application/json
 
 {
-    "username":"tesuxxx",
-    "email": "haroldgasparcayo@yahoo.es",
+    "username":"tesuxx;xl",
+    "email": "yahoo.es",
     "password" : "123456",
     "confirmed" : false,
     "blocked" : false    
 }
 
 ###
-POST http://localhost:8000/auth/send-email-confirmation
+POST http://hakhi.xyz:8000/auth/send-email-confirmation
 Content-Type: application/json
 
 {
