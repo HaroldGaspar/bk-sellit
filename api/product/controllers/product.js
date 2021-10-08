@@ -18,4 +18,17 @@ module.exports = {
     }
     return sanitizeEntity(entity, { model: strapi.models.product });
   },
+  async find(ctx) {
+    console.log("ctx ", ctx.query);
+    let entities;
+    if (ctx.query._q) {
+      entities = await strapi.services.product.search(ctx.query);
+    } else {
+      entities = await strapi.services.product.find(ctx.query);
+    }
+
+    return entities.map((entity) =>
+      sanitizeEntity(entity, { model: strapi.models.product })
+    );
+  },
 };
