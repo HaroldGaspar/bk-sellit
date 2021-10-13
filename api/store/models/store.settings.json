@@ -32,7 +32,8 @@
       "collection": "category"
     },
     "customer": {
-      "model": "customer"
+      "model": "customer",
+      "via": "store"
     }
   }
 }

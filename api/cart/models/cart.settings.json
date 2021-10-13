@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "carts",
   "info": {
-    "name": "Cart"
+    "name": "Cart",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -28,6 +29,22 @@
     "product_details": {
       "collection": "product-detail",
       "via": "cart"
+    },
+    "is_actual": {
+      "type": "boolean",
+      "required": false
+    },
+    "in_use": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "desactive"
+      ]
     }
   }
 }

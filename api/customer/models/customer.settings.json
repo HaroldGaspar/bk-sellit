@@ -22,6 +22,10 @@
     "carts": {
       "via": "customer",
       "collection": "cart"
+    },
+    "store": {
+      "via": "customer",
+      "model": "store"
     }
   }
 }
