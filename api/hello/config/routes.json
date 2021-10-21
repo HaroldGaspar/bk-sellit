@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/checkout",
+      "handler": "hello.checkout",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mm",
+      "handler": "mail.mailer",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/emm",
+      "handler": "email.send",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

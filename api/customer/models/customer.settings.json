@@ -26,6 +26,10 @@
     "store": {
       "via": "customer",
       "model": "store"
+    },
+    "reviews": {
+      "via": "customer",
+      "collection": "review"
     }
   }
 }

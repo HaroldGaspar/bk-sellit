@@ -37,9 +37,8 @@
       "via": "reviews",
       "model": "product"
     },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user",
+    "customer": {
+      "model": "customer",
       "via": "reviews"
     }
   }
