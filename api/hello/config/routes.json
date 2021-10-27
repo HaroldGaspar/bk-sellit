@@ -9,7 +9,7 @@
       }
     },
     {
-      "method": "GET",
+      "method": "POST",
       "path": "/mm",
       "handler": "mail.mailer",
       "config": {
@@ -20,6 +20,14 @@
       "method": "GET",
       "path": "/emm",
       "handler": "email.send",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vtfm",
+      "handler": "mail.verificate",
       "config": {
         "policies": []
       }

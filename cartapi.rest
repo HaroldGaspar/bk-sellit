@@ -17,7 +17,13 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8000/mm
+POST http://localhost:8000/mm
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImlhdCI6MTYzNDYxMDU1NSwiZXhwIjoxNjM3MjAyNTU1fQ.8bvWnLv6lRfIxbzuCfZL7MXFgcnCqo3OqmVOZpF3E-M
+Content-Type: application/json
 
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImlhdCI6MTYzNDYxMDU1NSwiZXhwIjoxNjM3MjAyNTU1fQ.8bvWnLv6lRfIxbzuCfZL7MXFgcnCqo3OqmVOZpF3E-M",
+   "email": "gaspar.hrl@gmail.com"
+}
 ###
-GET http://localhost:8000/emm
+GET http://localhost:8000/vtfm?tk=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTYzNTI1ODgxMiwiZXhwIjoxNjM3ODUwODEyfQ.PZE5oBttvp9CQXbTVatORr32BGDo06kdNC8jbPkF41g

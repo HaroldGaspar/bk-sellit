@@ -34,11 +34,6 @@
       "type": "boolean",
       "required": false
     },
-    "in_use": {
-      "type": "boolean",
-      "required": false,
-      "default": true
-    },
     "state": {
       "type": "enumeration",
       "enum": [
