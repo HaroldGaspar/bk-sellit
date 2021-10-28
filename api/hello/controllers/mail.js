@@ -1,10 +1,10 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 //WORKS ✓
 module.exports = {
   mailer: async (ctx) => {
     // Store the new user in database.
     const { email, token } = ctx.request.body;
-    const urlVerification = `http://localhost:3008/vtfm/${token}`
+    const urlVerification = `http://sellit.hakhi/vtfm/${token}`;
     // const user = await Customer.create(ctx.query);
 
     //Send an email to validate his subscriptions.
@@ -19,7 +19,7 @@ module.exports = {
       process.env.MAIL_PROVIDER,
       // user,
       urlVerification,
-      email,
+      email
     );
 
     // Send response to the server.
@@ -30,13 +30,13 @@ module.exports = {
   },
 
   /**NOT APPLICATE */
-  verificate: async(ctx)=>{
-    const {tk} = ctx.query
-    const {id} = await jwt.decode(tk, process.env.ADMIN_JWT_SECRET)
-    ctx.redirect('http://localhost:3008')
+  verificate: async (ctx) => {
+    const { tk } = ctx.query;
+    const { id } = await jwt.decode(tk, process.env.ADMIN_JWT_SECRET);
+    ctx.redirect("http://localhost:3008");
     //update user
     // strapi.services.userVerificate.update(id)
     // console.log(id)
     // console.log("query", ctx.query)
-  }
+  },
 };
