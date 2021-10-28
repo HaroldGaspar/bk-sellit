@@ -4,7 +4,7 @@ module.exports = {
   mailer: async (ctx) => {
     // Store the new user in database.
     const { email, token } = ctx.request.body;
-    const urlVerification = `http://sellit.hakhi/vtfm/${token}`;
+    const urlVerification = `http://sellit.hakhi.xyz/vtfm/${token}`;
     // const user = await Customer.create(ctx.query);
 
     //Send an email to validate his subscriptions.
