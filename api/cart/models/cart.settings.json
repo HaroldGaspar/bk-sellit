@@ -40,6 +40,9 @@
         "active",
         "desactive"
       ]
+    },
+    "transaction": {
+      "type": "string"
     }
   }
 }
